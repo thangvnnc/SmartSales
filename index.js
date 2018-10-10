@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const apiv1 = require("./apiv1");
 const CUser = require("./apiv1/Products/Cotroller/CUser");
 const app = express();
-const PORT = 80;
+const PORT = 1234;
 
 // const URL           = "mongodb://192.168.1.110:27017/smartmotel";
 const URL = "mongodb://thang:thang01652608118@ds237192.mlab.com:37192/smartmotel";
