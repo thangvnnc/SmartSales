@@ -13,39 +13,48 @@
           name='viewport'/>
     <link href="../common/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../common/css/teamplate.css?v=1.1.0" rel="stylesheet"/>
+    <style>
+        .form-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        body {
+            background: #0c2646;
+        }
+    </style>
 </head>
 
 <body class="">
-<div class="wrapper ">
-    <div class="content">
-        <div class="row">
-            <div class="col-md-4 col-sm-2"></div>
-            <div class="col-md-4 col-sm-8 col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <form class="form-login" onsubmit="return false;">
-                            <div class="form-group">
-                                <label for="label-target-username">Tên đăng nhập</label>
-                                <input id="label-target-username" type="text" class="form-control edt-username" placeholder="Tên đăng nhập"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="label-target-password">Mật khẩu</label>
-                                <input id="label-target-password" type="password" class="form-control edt-password"/>
-                            </div>
-                            <button class="btn btn-primary btn-block btn-login">Đăng nhập</button>
-                        </form>
-                    </div>
+<div class="wrapper">
+    <div class="content form-center">
+        <div class="offset-12">
+            <div class="card">
+                <div class="card-body">
+                    <form class="form-login" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="label-target-username">Tên đăng nhập</label>
+                            <input id="label-target-username" type="text" class="form-control edt-username"
+                                   placeholder="Tên đăng nhập"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="label-target-password">Mật khẩu</label>
+                            <input id="label-target-password" type="password" class="form-control edt-password"/>
+                        </div>
+                        <button class="btn btn-primary btn-block btn-login">Đăng nhập</button>
+                    </form>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-2"></div>
         </div>
     </div>
 </div>
+</body>
+
 <script src="../common/js/core/jquery.min.js"></script>
 <script src="../common/js/core/bootstrap.min.js"></script>
 <script src="../common/js/modal.js"></script>
-<script src="../common/js/common.js"></script>
+<script src="../common/js/urls.js"></script>
 <script src="js/login.js"></script>
-</body>
 
 </html>
