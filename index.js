@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const apiv1 = require("./apiv1");
 const CUser = require("./apiv1/Products/Cotroller/CUser");
 const app = express();
-const PORT = 1234;
+const PORT = 80;
 
 // const URL           = "mongodb://192.168.1.110:27017/smartmotel";
 const URL = "mongodb://thang:thang01652608118@ds237192.mlab.com:37192/smartmotel";
@@ -36,7 +36,7 @@ app.use("/apiv1", apiv1);
 app.use("/app", express.static(__dirname + "/public/app"));
 app.use("/common", express.static(__dirname + "/public/common"));
 app.use("/login", CUser.AuthRedirectLogin, express.static(__dirname + "/public/login"));
-app.use("/admin", CUser.AuthRoute, express.static(__dirname + "/public/admin"));
+app.use("/admin", CUser.AuthRouteAdmin, express.static(__dirname + "/public/admin"));
 
 // Hàm lắng nghe web html theo port
 app.listen(PORT, (err) => {

@@ -1,7 +1,7 @@
 "use strict";
 const nodemailer    = require("nodemailer");
 
-const Error         = require("../Define/Error");
+const Error         = require("../Define/Error/BaseError");
 const CLog          = require("./CLog");
 
 const MAIL_USER     = "thangdeveloper1509@gmail.com";

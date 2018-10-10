@@ -2,6 +2,7 @@
 class Group{
     constructor() {
         this.id             = null;
+        this.code           = null;
         this.name           = null;
         this.status         = null;
         this.url            = null;

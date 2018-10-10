@@ -1,9 +1,25 @@
 "use strict";
 const User = require("../Model/User");
-const Error = require("../Define/Error");
+const Error = require("../Define/Error/BaseError");
 const CBase = require("./CBase");
 
 class CUser extends User {
+    static fds () {
+        return {
+            ID                  : "id",
+            CODE                : "code",
+            USERNAME            : "username",
+            PASSWORD            : "password",
+            NAME                : "name",
+            EMAIL               : "email",
+            PHONE               : "phone",
+            BIRTHDAY            : "birthDay",
+            RIGHTS              : "rights",
+            DATEUPDATEPASSWORD  : "dateUpdatePassword",
+            URL                 : "url",
+            CREATEAT            : "createAt"
+        }
+    }
 
     constructor() {
         super();
@@ -77,7 +93,7 @@ class CUser extends User {
     /**
      * Hàm chuyển dữ liệu request về dữ liệu controller user
      * @param data : Dữ liệu request cần chuyển thành controller
-     * @returns {CUser} : controller user
+     * @returns {User} : controller user
      */
     static parser(data) {
         // Kiểm tra đầu vào parser là null thì trả về null
@@ -165,7 +181,7 @@ class CUser extends User {
      * @param next : next continue route
      * @constructor
      */
-    static AuthRoute(request, response, next) {
+    static AuthRouteAdmin(request, response, next) {
         if (request.session.userSession === undefined) {
             response.redirect("/login");
         }

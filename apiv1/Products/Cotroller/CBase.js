@@ -1,6 +1,6 @@
 "use strict";
 const crypto        = require("crypto");
-const Error         = require("../Define/Error");
+const Error         = require("../Define/Error/BaseError");
 
 class CBase {
 }
